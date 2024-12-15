@@ -1,12 +1,10 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import WelcomeScreen from './src/screens/WelcomeScreen'
-import LoginScreen from './src/screens/LoginScreen'
+import RootNavigation from './src/RootNavigation'
 
 const App = () => {
   return (
-    // <WelcomeScreen/>
-    <LoginScreen/>
+    <RootNavigation/>
   )
 }
 

@@ -17,7 +17,7 @@ const WelcomeScreen = () => {
             <Text style={styles.btn}>Sign up</Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text style={styles.btn}>Sign up</Text>
+            <Text style={styles.btn}>Sign In</Text>
           </TouchableOpacity>
         </View>
     </View>
