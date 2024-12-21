@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { btn1, colors, titles } from '../globals/style'
 import eye from '../../assets/eye.jpg'
+import { useNavigation } from '@react-navigation/native'
 const LoginScreen = () => {
     const [emailfocus, setEmailfocus] = useState(false);
     const [passwordfocus, setPasswordfocus] = useState(false);
     const [showpassword, setShowpassword] = useState(false);
+    const navigation = useNavigation()
   return (
     <View style={styles.container}>
         <Text style={styles.head1}>Sign in</Text>
@@ -32,7 +34,7 @@ const LoginScreen = () => {
         <Text style={styles.gftext}>Sign In With</Text>
 
         <Text>Don't have an account?
-            <Text style={styles.signup}>Sign Up</Text>
+            <Text style={styles.signup} onPress={()=>navigation.navigate('signup')}>Sign Up</Text>
         </Text>
 
     </View>
@@ -47,7 +49,7 @@ styles= StyleSheet.create({
         flex:1,
         width:"100%",
         alignItems:"center",
-        justifyContent:"center"
+        justifyContent:"center",
     },
     head1:{
         fontSize:titles.title1,

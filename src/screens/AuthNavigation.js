@@ -1,5 +1,5 @@
 import React from 'react'
-import { createNativeStackNavigator }from "@react-navigation/native-stack"
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { View } from 'react-native'
 import WelcomeScreen from './WelcomeScreen';
 import SignupScreen from './SignupScreen';
@@ -9,11 +9,13 @@ const Stack = createNativeStackNavigator();
 
 const AuthNavigation = () => {
   return (
-    <Stack.Navigator>
-        <Stack.Screen name="Welcomepage" component={WelcomeScreen}
-        options={{headerShown:false}} />
-        <Stack.Screen name="signup" component={SignupScreen} />
-        <Stack.Screen name="login" component={LoginScreen} />
+    <Stack.Navigator initialRouteName='Welcomepage'>
+      <Stack.Screen name="Welcomepage" component={WelcomeScreen}
+        options={{ headerShown: false }} />
+      <Stack.Screen name="signup" component={SignupScreen}
+        options={{ headerShown: false }} />
+      <Stack.Screen name="login" component={LoginScreen}
+        options={{ headerShown: false }} />
 
     </Stack.Navigator>
   )

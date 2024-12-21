@@ -2,7 +2,9 @@ import React from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import logo from '../../assets/logo.jpg'
 import style, {colors, hr80} from '../globals/style.js'
+import { useNavigation } from '@react-navigation/native'
 const WelcomeScreen = () => {
+  const navigation = useNavigation();
   return (
     <View style = {styles.container}>
         <Text style={styles.title}>Welcome to Foodie</Text>
@@ -14,11 +16,12 @@ const WelcomeScreen = () => {
         <View style ={hr80}/>
         <View style={styles.btnout} >
           <TouchableOpacity>
-            <Text style={styles.btn}>Sign up</Text>
+            <Text style={styles.btn} onPress={()=>navigation.navigate('signup')}>Sign up</Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text style={styles.btn}>Sign In</Text>
-          </TouchableOpacity>
+            <Text style={styles.btn} onPress={()=>navigation.navigate('login')}>Sign In</Text>
+          </TouchableOpacity>    
+                            
         </View>
     </View>
   )
