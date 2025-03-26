@@ -7,9 +7,9 @@ const HomeHeadNav = () => {
   return (
     <View style={styles.container}>
         <Text>
-            Home head Nav image
+            Hamburger
         </Text>
-        <View>
+        <View style={styles.containerin}>
             <Text> Foodie</Text>
 
         </View>
@@ -31,5 +31,9 @@ const styles = StyleSheet.create({
         elevation: 20,
         borderBottomLeftRadius:20,
         borderBottoRightRadius:20
+    },
+    containerin:{
+        flexDirection:"row",
+        alignItems:"center",
     }
 })
